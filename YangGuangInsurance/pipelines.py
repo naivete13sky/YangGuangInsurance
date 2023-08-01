@@ -16,7 +16,7 @@ class YangGuangInsurancePipeline(object):
 
     def open_spider(self, spider):
         pass
-        self.conn = sqlite3.connect("my_scrapy3.db")
+        self.conn = sqlite3.connect("my_scrapy_yangGuangInsurance.db")
 
 
     def close_spider(self, spider):
