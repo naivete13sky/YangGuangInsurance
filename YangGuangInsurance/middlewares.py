@@ -27,7 +27,7 @@ class YangGuangInsuranceDownloaderMiddleware(object):
         loop = asyncio.get_event_loop()
 
         # print("*" * 30, "log in", "*" * 30)
-        task = asyncio.ensure_future(self.login('wangyufeng-wwyg', 'Cc123456.', 'https://osms.sinosig.com/#/login'))
+        task = asyncio.ensure_future(self.login('wangyufeng-wwyg', 'Cc123456*', 'https://osms.sinosig.com/#/login'))
         # task = asyncio.ensure_future(self.login('weijun-wwyg', 'Wj~202181', 'https://osms.sinosig.com/#/login'))
         # task = asyncio.ensure_future(self.login('fengtaozhao-wwyg', 'Ftz123...', 'https://osms.sinosig.com/#/login'))
         print("*" * 30, "log in finish", "*" * 30)
