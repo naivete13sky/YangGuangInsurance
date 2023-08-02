@@ -98,7 +98,7 @@ class YangGuangInsuranceDownloaderMiddleware(object):
         print('request.url:',request.url)
 
         #在打开正常页面地址前，先打开下面这个页面的目的是使得每次搜索前先恢复到原始状态。
-        await self.page.goto('https://osms-web-prd.hyan-tech.com/#/outsourceOwnQueue')
+        await self.page.goto('https://osms.sinosig.com/#/outsourceOwnQueue')
         await asyncio.sleep(1)
 
         await self.page.goto(request.url)
