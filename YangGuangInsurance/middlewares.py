@@ -109,7 +109,7 @@ class YangGuangInsuranceDownloaderMiddleware(object):
         # print("response:",response)
         soup = BeautifulSoup(response, 'lxml')
         current_toushuanjian_s = soup.select('#app > div > div > section > div.nav-tabs.el-tabs.el-tabs--top > div.el-tabs__content > div.containter > div.el-dialog__wrapper.settleDialog > div > div.el-dialog__body > span')
-        # print("current_toushuanjian_s length:",len(current_toushuanjian_s))
+        print("current_toushuanjian_s length:",len(current_toushuanjian_s))
         if len(current_toushuanjian_s) == 1:
             print("current_toushuanjian_s length:", len(current_toushuanjian_s))
             current_toushuanjian = soup.select('#app > div > div > section > div.nav-tabs.el-tabs.el-tabs--top > div.el-tabs__content > div.containter > div.el-dialog__wrapper.settleDialog > div > div.el-dialog__body > span')[0].text
@@ -120,6 +120,7 @@ class YangGuangInsuranceDownloaderMiddleware(object):
         #鼠标滚动到底
         await self.page.evaluate('window.scrollBy(0, document.body.scrollHeight)')
         await asyncio.sleep(3)
+        # await asyncio.sleep(20)
         # content = await self.page.content()
         #下面是把身份证变成没有*。点击身份证号前面的放大镜。
         response=await self.page.content()
