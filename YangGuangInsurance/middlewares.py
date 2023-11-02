@@ -2,13 +2,15 @@
 from bs4 import BeautifulSoup
 from pyppeteer import launch
 import base64,json,time
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
 import gl as gl
 from scrapy import signals
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 import random
 import pyppeteer
 import asyncio
-import os
 from scrapy.http import HtmlResponse
 
 pyppeteer.DEBUG = False
